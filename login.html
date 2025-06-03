@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>織墨</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- logo -->
+            <a href="index.html" class="header-logo">
+                <img src="./img/logo.svg" alt="LOGO">
+            </a>
+            <!-- menu -->
+            <nav class="main-nav">
+                <a href="about.html">關於我們</a>
+                <a href="news.html">最新消息</a>
+                <a href="allitems.html">商品總覽</a>
+                <a href="faq.html">常見問題</a>
+                <div class="header-icons">
+                    <a href="#" class="icon-img">
+                        <img src="./img/header/header-icon-search.svg" alt="搜尋">
+                    </a>
+                    <a href="login.html" class="icon-img">
+                        <img src="./img/header/header-icon-account.svg" alt="會員">
+                    </a>
+                    <a href="cart.html" class="icon-img">
+                        <img src="./img/header/header-icon-cart.svg" alt="購物車">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- main-area -->
+    <main>
+        <section class="form-area container">
+            <h5>註冊或登入以繼續</h5>
+            <div class="register-login">
+                <div class="toggle-button">
+                    <button id="registerBTN">註冊帳號</button>
+                    <button id="loginBTN" class="active">登入</button>
+                </div>
+                <form id="register-form" class="form-section hidden">
+                    <input type="tel" placeholder="手機號碼">
+                    <input type="email" placeholder="電子郵件">
+                    <label class="check-box">
+                        <input type="checkbox">
+                        <span>我同意網站
+                            <a href="#">服務條款</a>
+                            及
+                            <a href="#">隱私權政策</a>
+                        </span>
+                    </label>
+                    <button class="continue-btn">下一步</button>
+                    <div class="social-login">
+                        <p>或使用社群帳號註冊</p>
+                        <div class="social-btn">
+                            <button><img src="./img/login/login-icon-google.svg" alt="google"></button>
+                            <button><img src="./img/login/login-icon-fb.svg" alt="facebook"></button>
+                            <button><img src="./img/login/login-icon-line.svg" alt="line"></button>
+                        </div>
+                    </div>
+                </form>
+                <form id="login-form" class="form-section active">
+                    <input type="email" placeholder="電子郵件">
+                    <div class="password-input">
+                        <input type="password" placeholder="密碼">
+                        <span class="toggle-password" id="togglePassword">
+                            <img src="./img/login/login-close.svg" alt="eye">
+                        </span>
+                    </div>
+                    <span class="forget-password">
+                        <a href="#">忘記密碼？</a>
+                    </span>
+                    <button class="continue-btn">開始購物吧！</button>
+                    <div class="social-login">
+                        <p>或使用社群帳號登入</p>
+                        <div class="social-btn">
+                            <button><img src="./img/login/login-icon-google.svg" alt="google"></button>
+                            <button><img src="./img/login/login-icon-fb.svg" alt="facebook"></button>
+                            <button><img src="./img/login/login-icon-line.svg" alt="line"></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer class="main-footer">
+        <div class="footer-bg"></div>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    <img src="./img/logo.svg" alt="LOGO">
+                </a>
+                <div class="footer-icons">
+                    <a href="#" class="footer-img">
+                        <img src="./img/footer/footer-icon-fb.svg" alt="facebook">
+                    <a href="#" class="footer-img">
+                        <img src="./img/footer/footer-icon-ins.svg" alt="instagram">
+                    </a>
+                    <a href="#" class="footer-img">
+                        <img src="./img/footer/footer-icon-line.svg" alt="line">
+                    </a>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h5>聯絡我們</h5>
+                <p>Mail：Service@zhimo.com</p>
+                <p>Line：@zhimo</p>
+                <p>地址：桃園市中壢區復興路46號9樓</p>
+                <p>客服時間：週一至週五9:00-18:00</p>
+            </div>
+            <div class="footer-link">
+                <ul>
+                    <li><a href="about.html">關於織墨</a></li>
+                    <li><a href="news.html">最新消息</a></li>
+                    <li><a href="allitems.html">商品總覽</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Zhimo Co. All rights reserved.</p>
+                <p>本網站為TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

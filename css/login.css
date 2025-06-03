@@ -1,0 +1,162 @@
+body {
+    background-image: url(../img/login/login-bg.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.container {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+.form-area h5 {
+    margin-bottom: 20px;
+    color: #2b333e;
+}
+.register-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.toggle-button {
+    display: flex;
+    justify-content: space-around;
+    width: 280px;
+    margin-bottom: 55px;
+    background-color: #e2e1e4;
+    border-radius: 25px;
+}
+.toggle-button button {
+    font-family: "Noto Serif TC";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: calc(30/18);
+    letter-spacing: 0.1em;
+    flex: 1;
+    margin: 5px 7px;
+    padding: 5px 25px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2b333e;
+    border-radius: 20px;
+}
+.toggle-button button.active {
+    background-color: #fff;
+    color: #2b333e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-section input {
+    font-family: "Noto Serif TC";
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #495c69;
+    width: 426px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #495c69;
+    font-size: 15px;
+    background-color: transparent;
+}
+.form-section input:focus {
+    outline: none;
+}
+.check-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+    margin: 5px;
+}
+.check-box input[type="checkbox"] {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+}
+.check-box span {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #495c69;
+}
+.check-box a {
+    color: #495c69;
+    font-weight: 800;
+}
+.continue-btn {
+    width: 100%;
+    padding: 14px 145px;
+    background-color: #495C69;
+    font-family: "Noto Serif TC";
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #FFFEF9;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.continue-btn:hover {
+    background-color: #2b333e;
+}
+.continue-btn:active {
+    color: #495c69;
+    background-color: #ccccd6;
+}
+.password-input {
+    position: relative;
+    width: 100%;
+}
+.password-input .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.forget-password {
+    margin: 7px 0;
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+.forget-password a {
+    color: #495c69;
+    text-decoration: none;
+    padding-left: 5px;
+}
+.social-login {
+    margin: 25px 0;
+}
+.social-login p {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #495C69;
+    margin-bottom: 15px;
+}
+.social-btn button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 40%;
+    width: 40px;
+    height: 50%;
+}
+.social-btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+ /* 隱藏元素 */
+.form-section.hidden {
+    display: none;
+}
