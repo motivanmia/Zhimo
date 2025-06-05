@@ -211,3 +211,11 @@ body {
 main {
     flex: 1;
 }
+/* input隱藏上下鍵 */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}

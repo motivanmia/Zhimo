@@ -174,11 +174,6 @@
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.1em;
-    -moz-appearance: textfield;
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
 }
 .button-cart {
     display: flex;
