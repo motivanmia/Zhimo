@@ -173,13 +173,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .list-set ul {
     flex-direction: column;
     justify-content: center;
     padding: 15px;
-    gap: 12px;
+    gap: 20px;
     background: #FFF;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20);
     position: absolute;
@@ -191,6 +192,7 @@
 }
 
 .list-set:hover ul {
+    cursor: pointer;
     display: flex;
 }
 
