@@ -52,12 +52,16 @@
 /* list-menu */
 .items-box {
     display: flex;
+    padding-top: var(--spacing-6, 32px);
 }
 
 .left-box {
     margin-left: -10px;
-    padding-top: var(--spacing-6, 32px);
     margin-right: 20px;
+}
+
+.left-box h5 {
+    padding-left: 5px;
 }
 
 .list-menu {
@@ -66,7 +70,8 @@
     flex-direction: column;
     gap: .5rem;
     border-top: 2px solid #ccccd6;
-    padding-top: var(--spacing-2, 16px);
+    padding-top: var(--spacing-1, 12px);
+    padding-left: var(--spacing-1, 12px);
 }
 
 .list-menu a.menu-item {
@@ -147,7 +152,6 @@
 .title-area {
     display: flex;
     align-items: center;
-    padding-top: var(--spacing-6, 32px);
 }
 
 .title-area h4::before {
