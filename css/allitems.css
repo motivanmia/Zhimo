@@ -62,14 +62,14 @@
 
 .left-box h5 {
     padding-left: 5px;
+    padding-bottom: 5px;
 }
 
 .list-menu {
-    margin-top: var(--spacing-1, 12px);
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    border-top: 2px solid #ccccd6;
+    border-top: 1.5px solid #ccccd6;
     padding-top: var(--spacing-1, 12px);
     padding-left: var(--spacing-1, 12px);
 }
