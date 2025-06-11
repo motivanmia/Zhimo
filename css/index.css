@@ -7,6 +7,7 @@ body {
     background-attachment: local;
     background-size: 100%;
 }
+
 .material {
     position: fixed;
     top: 0;
@@ -18,7 +19,13 @@ body {
     background-size: auto;
     z-index: 1;
 }
-.main-header,.home-banner,.about-brand,.new-items,.best-items {
+
+.main-header,
+.home-banner,
+.about-brand,
+.about-news,
+.new-items,
+.best-items {
     position: relative;
     z-index: 3;
 }
@@ -28,55 +35,67 @@ body {
     background-image: none;
     background-color: transparent;
 }
+
 .header-logo {
     display: none;
 }
+
 .header-container {
     padding: 30px;
     justify-content: flex-end;
 }
+
 .main-nav {
     display: flex;
 }
+
 /* banner */
 .home-banner {
     position: relative;
-    height: 884px;    
-    padding-bottom: 125px;
+    height: 884px;
+    margin-bottom: 200px;
 }
+
 .home-logo {
     position: absolute;
     top: -10%;
     left: 16%;
     width: 269px;
 }
+
 .banner-area {
     display: flex;
     justify-content: end;
     width: 100%;
 }
+
 .banner-area .banner-img {
     width: 70%;
 }
+
 .banner-area .banner-img img {
     width: 100%;
 }
+
 .banner-content {
     position: absolute;
-    bottom: 18%;
+    bottom: 5%;
     left: 19%;
-    display: flex; 
+    display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 1.5em;
     color: #2d2e36;
 }
+
 .banner-content .banner-title {
     writing-mode: vertical-lr;
 }
+
 .banner-title .line-2 {
-    text-indent: 1.5em; 
+    text-indent: 1.5em;
 }
+
 .banner-content .banner-text {
     writing-mode: vertical-lr;
     font-size: 1.25rem;
@@ -85,33 +104,41 @@ body {
     letter-spacing: 0.4em;
     margin-top: 60px;
 }
+
 /* about */
 .about-brand {
-    padding: 125px 0px;
+    margin-bottom: 200px;
 }
+
 .index-title {
     display: flex;
     justify-content: center;
     max-width: 500px;
     margin: 0 auto;
-    padding-bottom: var(--spacing-10,48px);
+    padding-bottom: var(--spacing-10, 48px);
 }
+
 .index-title img {
     width: auto;
 }
+
 .index-title .img-left {
     margin-right: 25px;
 }
+
 .index-title .img-right {
     margin-left: 25px;
 }
+
 h2 {
     margin-right: -0.3em;
     color: #2d2e36;
 }
+
 .about-area {
     position: relative;
 }
+
 .about-bg {
     display: flex;
     width: 60%;
@@ -119,6 +146,7 @@ h2 {
     overflow: hidden;
     border-radius: 0 15px 15px 0;
 }
+
 .about-bg img {
     width: 100%;
     height: 100%;
@@ -126,8 +154,9 @@ h2 {
     object-fit: cover;
     object-position: 0px -50px;
 }
+
 .about-content {
-    position: absolute ;
+    position: absolute;
     top: 40%;
     right: 15%;
     border-radius: 15px;
@@ -137,30 +166,151 @@ h2 {
     background-size: auto;
     box-shadow: 5px 5px 20px -3px rgba(0, 0, 0, 0.15);
 }
+
 .about-content a {
     width: 480px;
     text-decoration: none;
     display: block;
     padding: 82px 48px;
-    color:  #495c69;
+    color: #495c69;
     font-size: 1.5rem;
     font-weight: 500;
     line-height: calc(40/24);
     letter-spacing: 0.1em;
 }
+
+/* news */
+.about-news {
+    margin-bottom: 200px;
+}
+
+.news-area {
+    width: 100%;
+    border-radius: 15px;
+    background-image: url(../img/pattern/news.png);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-color: rgba(226, 225, 228, 0.2);
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.news-area .news-list {
+    margin: var(--spacing-13, 60px) 0;
+}
+
+.news-area .news-title {
+    writing-mode: vertical-lr;
+    margin: var(--spacing-13, 60px) 0;
+    padding: 0;
+}
+
+.news-area .news-list-item {
+    margin-bottom: var(--spacing-4, 24px);
+}
+
+.news-list-item a {
+    border-bottom: 1px solid #CCCCD6;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    padding-bottom: var(--spacing-4, 24px);
+}
+
+.news-list-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #495c69;
+    height: 1px;
+    width: 0;
+    transition: 0.5s ease;
+}
+
+.news-list-item a:hover::after {
+    width: 100%;
+}
+
+.news-time {
+    color: #495c69;
+    display: flex;
+    align-items: center;
+}
+
+.news-date {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: calc(30/40);
+    letter-spacing: 0.1em;
+    margin-right: var(--spacing-2, 16px);
+}
+
+.news-tag {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    background-color: #fffef9;
+    border: 1px solid #495c69;
+    padding: 4px 10px;
+    border-radius: 13px;
+}
+
+.news-content {
+    color: #2b333e;
+    padding-top: 20px;
+}
+
+.btn-more {
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+    padding-right: var(--spacing-12, 56px);
+}
+
+.btn-more a {
+    color: #2b333e;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: calc(30/40);
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    position: relative;
+}
+
+.btn-line {
+    position: absolute;
+    top: 25%;
+}
+
+.original-line,
+.extension-part {
+    transition: opacity 0.1s ease-out,
+        stroke-dashoffset 0.1s ease-in-out;
+}
+
+.extension-part {
+    opacity: 0;
+}
+
 /* new-items */
 .new-items {
-    padding: 125px 0px;
+    margin-bottom: 200px;
 }
+
 .item-card {
     position: relative;
     margin: 50px 0;
 }
+
 .item-card a {
     text-decoration: none;
     display: block;
     height: 446px;
 }
+
 .item-img {
     width: 95%;
     height: 370px;
@@ -169,12 +319,14 @@ h2 {
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
     margin: auto;
 }
+
 .item-card img {
     width: 100%;
     height: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
+
 .item-hover {
     position: absolute;
     margin: auto;
@@ -186,33 +338,36 @@ h2 {
     background-image: url(../img/hoverdeco4.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    opacity: 0; 
+    opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
+
 .item-card:hover .item-hover {
     opacity: 1;
     visibility: visible;
 }
+
 .item-card p {
     color: #2b333e;
     text-align: center;
 }
+
 .item-name {
     font-size: 1.25rem;
     font-weight: 600;
-    line-height: calc(30/40);
     letter-spacing: 0.1em;
     margin-top: var(--spacing-4, 24px);
-    margin-bottom: 0.4em;
+    margin-bottom: 1rem;
 }
+
 .item-price {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    line-height: calc(30/18);
     letter-spacing: 0.1em;
 }
-/* best-items */
+
+/* best item */
 .best-items {
-    padding: 125px 0px;
+    margin-bottom: 150px;
 }

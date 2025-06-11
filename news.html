@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/news.css">
 </head>
+
 <body>
     <!-- header -->
     <header class="main-header">
@@ -43,94 +45,99 @@
     <!-- main-area -->
     <main>
         <section class="news">
-            <div class="news-area">
-                <div class="container">
-                    <div class="items-area">
-                        <div class="title col-1">
-                            <h2>最新消息</h2>
-                        </div>
-                        <div class="news-content col-11">
-                            <div class="decoline"></div>
-                            <div class="news-card">
-                                <a href="#">
-                                    <div class="news-img ">
-                                        <img src="./img/news/news (1).jpg" alt="news-1">
-                                    </div>
-                                    <div class="news-cont col-9">
-                                        <div class="news-title col-12">
-                                            <h3>新品上市｜竹風系列</h3>
-                                            <p>2025/06/01</p>
-                                        </div>
-                                        <div class="news-text col-10">
-                                            <p>全新「竹風」系列，將東方雅韻輕巧融入日常，如同拂過竹林的微風，即使身處都市喧囂，也能感受清風拂面、詩意隨行。</p>
-                                            <p>為你的日常，添一抹清新與灑脫。</p>
-                                        </div>
-                                    </div>
-                                </a>
+            <div class="container news-area">
+                <div class="news-title col-1">
+                    <h2>最新消息</h2>
+                </div>
+                <div class="news-list col-9">
+                    <ul class="category-list">
+                        <li class="category-item active">
+                            <a class="category-link" href="#">
+                                <span>全部消息</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a class="category-link" href="#">
+                                <span>新品上市</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a class="category-link" href="#">
+                                <span>優惠活動</span>
+                            </a>
+                        </li>
+                        <li class="category-item">
+                            <a class="category-link" href="#">
+                                <span>特別企劃</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="news-list-item">
+                        <a href="news.html">
+                            <div class="news-pic">
+                                <img src="./img/news/news-s (4).jpg" alt="">
                             </div>
-                            <div class="decoline"></div>
-                            <div class="news-card">
-                                <a href="#">
-                                    <div class="news-img">
-                                        <img src="./img/news/news (2).jpg" alt="news-2">
-                                    </div>
-                                    <div class="news-cont col-9">
-                                        <div class="news-title col-12">
-                                            <h3>優惠活動｜夏日清新優惠</h3>
-                                            <p>2025/05/20</p>
-                                        </div>
-                                        <div class="news-text col-10">
-                                            <p>織墨為你拂去暑氣，增添涼意！指定款式任兩件享八五折優惠。</p>
-                                            <p>消費滿NT$3500，即贈品牌設計清涼扇。</p>
-                                            <p>讓你在炎炎夏日也能優雅有型，輕鬆感受涼爽。</p>
-                                        </div>
-                                    </div>
-                                </a>
+                            <div class="news-content">
+                                <div class="news-time">
+                                    <p class="news-date">2025/06/23</p>
+                                    <p class="news-tag">特別企劃</p>
+                                </div>
+                                <div class="news-detail">
+                                    <h5>織墨．臨境：限時概念店將至，邀您共賞東方美。</h5>
+                                    <p>織墨首次獨家快閃店即將於RORO百貨登場，我們將打造一個充滿東方韻味的沉浸式空間，邀您一同探索傳統與現代融合的東方美學空間，品味織墨獨特魅力。</p>
+                                </div>
                             </div>
-                            <div class="decoline"></div>
-                            <div class="news-card">
-                                <a href="#">
-                                    <div class="news-img">
-                                        <img src="./img/news/news (3).jpg" alt="news-3">
-                                    </div>
-                                    <div class="news-cont col-9">
-                                        <div class="news-title col-12">
-                                            <h3>仲夏絮語｜質感風格提案</h3>
-                                            <p>2025/05/01</p>
-                                        </div>
-                                        <div class="news-text col-10">
-                                            <p>夏日的光影流轉，映照著風格的輕盈與深刻。</p>
-                                            <p>織墨為您提供仲夏的穿搭靈感，讓您即使身處日常，也能感受那份從容的自在與恰到好處的都會雅緻。</p>
-                                        </div>
-                                    </div>
-                                </a>    
-                            </div>
-                            <div class="decoline"></div>
-                            <nav class="page-navigation">
-                                <ul class="pagigation">
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <img src="./img/btn-left.svg" alt="上一頁">
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">1</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">3</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#">
-                                            <img src="./img/btn-right.svg" alt="下一頁">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
+                        </a>
                     </div>
+                    <div class="news-list-item">
+                        <a href="news.html">
+                            <div class="news-pic">
+                                <img src="./img/news/news (1).jpg" alt="">
+                            </div>
+                            <div class="news-content">
+                                <div class="news-time">
+                                    <p class="news-date">2025/06/01</p>
+                                    <p class="news-tag">新品上市</p>
+                                </div>
+                                <div class="news-detail">
+                                    <h5>全新系列「竹風」上市：拂竹清韻，詩意隨行。</h5>
+                                    <p>全新「竹風」系列，將東方雅韻輕巧融入日常，如同拂過竹林的微風，即使身處都市喧囂，也能感受清風拂面、詩意隨行。<br>為你的日常，添一抹清新與灑脫。
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news-list-item">
+                        <a href="news.html">
+                            <div class="news-pic">
+                                <img src="./img/news/news (2).jpg" alt="">
+                            </div>
+                            <div class="news-content">
+                                <div class="news-time">
+                                    <p class="news-date">2025/05/20</p>
+                                    <p class="news-tag">優惠活動</p>
+                                </div>
+                                <div class="news-detail">
+                                    <h5>織墨夏日獻禮：指定款式任兩件八五折，滿額贈禮。</h5>
+                                    <p>織墨為你拂去暑氣，增添涼意！指定款式任兩件享八五折優惠。<br>消費滿NT$3500，即贈品牌設計清涼扇。<br>讓你在炎炎夏日也能優雅有型，輕鬆感受涼爽。
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <nav class="page-navigation col-12">
+                        <ul class="pagigation">
+                            <li class="page-item active">
+                                <a class="page-link" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">3</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>
@@ -146,12 +153,12 @@
                 <div class="footer-icons">
                     <a href="#" class="footer-img">
                         <img src="./img/footer/footer-icon-fb.svg" alt="facebook">
-                    <a href="#" class="footer-img">
-                        <img src="./img/footer/footer-icon-ins.svg" alt="instagram">
-                    </a>
-                    <a href="#" class="footer-img">
-                        <img src="./img/footer/footer-icon-line.svg" alt="line">
-                    </a>
+                        <a href="#" class="footer-img">
+                            <img src="./img/footer/footer-icon-ins.svg" alt="instagram">
+                        </a>
+                        <a href="#" class="footer-img">
+                            <img src="./img/footer/footer-icon-line.svg" alt="line">
+                        </a>
                     </a>
                 </div>
             </div>
@@ -177,4 +184,5 @@
         </div>
     </footer>
 </body>
+
 </html>

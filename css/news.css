@@ -1,93 +1,175 @@
-.news {
+body {
     background-image: url(../img/news/news-bg.svg);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center 160px;
+    background-position: center 200px;
 }
+
+/* ategory-list */
+.category-list {
+    display: flex;
+    align-items: center;
+    padding: 20px 5px;
+    border-bottom: 1px solid #CCCCD6;
+}
+
+.category-list a {
+    text-decoration: none;
+}
+
+.category-link span {
+    padding: 12px 0;
+    text-align: left;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #495c69;
+}
+
+.category-item {
+    padding: 0 30px;
+}
+
+.category-item.active {
+    position: relative;
+}
+
+.category-item.active:hover span {
+    color: #495c69;
+}
+
+.category-item:hover span {
+    color: #ccccd6;
+}
+
+.category-item.active::before {
+    content: url(../img/list-pic.png);
+    position: absolute;
+    display: block;
+    vertical-align: baseline;
+    left: 5%;
+}
+
+/* news */
+h2 {
+    color: #2d2e36;
+}
+
 .news-area {
-    width: 1500px;
+    width: 100%;
     border-radius: 15px;
     background-image: url(../img/pattern/news.png);
     background-repeat: repeat;
     background-position: 0 0;
     background-color: rgba(226, 225, 228, 0.2);
     display: flex;
+    justify-content: center;
+    padding: 0;
     margin: 100px auto;
 }
-h1 {
-    color: #2d2e36;
+
+.news-area .news-list {
+    margin: 70px 0;
 }
-.items-area {
+
+.news-area .news-title {
+    writing-mode: vertical-lr;
+    margin: 70px 0;
+    padding: 0;
+}
+
+.news-list-item a {
+    border-bottom: 1px solid #CCCCD6;
     position: relative;
+    text-decoration: none;
+    padding: var(--spacing-5, 28px) 5px;
     display: flex;
-    margin: 110px auto;
+    flex-direction: row;
 }
-.decoline {
+
+.news-list-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #495c69;
+    height: 1px;
+    width: 0;
+    transition: 0.5s ease;
+}
+
+.news-list-item a:hover::after {
     width: 100%;
-    height: 35px;
-    background-image: url(../img/news/news-decoline.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    margin: var(--spacing-1,12px) auto;
 }
-.news-img {
+
+.news-pic {
     width: 244px;
     height: 180px;
-    overflow: hidden;
-    border-radius: 5px;
+    margin-right: 30px;
 }
-.news-img img {
+
+.news-pic img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.news-card {
-    display: flex;
-    align-items: center;
-    margin: var(--spacing-4,24px) var(--spacing-5,28px);  
-}
-.news-cont {
+
+.news-content {
+    width: 600px;
     display: flex;
     flex-direction: column;
-    margin: auto;
-    gap: var(--spacing-6, 32px);
+    justify-content: center;
 }
-.news-title {
-    display: flex;
-    justify-content: space-between;
-}
-.news-card a {
-    display: flex;
-    text-decoration: none;
-    width: 100%;
-    height: 180px;
-}
-.news-cont h3 {
-    display: inline-flex;
-    color: #2d2e36;
-}
-.news-cont p {
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: calc(40/30);
-    letter-spacing: 0.1em;
-}
-.news-title p {
+
+.news-time {
     color: #495c69;
+    display: flex;
+    align-items: center;
 }
-.news-text p {
+
+.news-date {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-right: var(--spacing-2, 16px);
+}
+
+.news-tag {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    background-color: #fffef9;
+    border: 1px solid #495c69;
+    padding: 4px 10px;
+    border-radius: 13px;
+}
+
+.news-detail h5 {
+    color: #2b333e;
+    margin: 10px 0;
+}
+
+.news-detail p {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: calc(30/18);
+    letter-spacing: 0.1em;
     color: #2b333e;
 }
+
 /* pagigation */
-.pagigation{
+.pagigation {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
+
 .page-item {
-    margin: var(--spacing-1,12px) var(--spacing-2,16px);
+    margin: 0 var(--spacing-2, 16px);
+    margin-top: var(--spacing-4, 24px);
+    position: relative;
 }
+
 .page-link {
     display: block;
     text-decoration: none;
@@ -96,7 +178,16 @@ h1 {
     font-weight: 600;
     line-height: calc(30/18);
     letter-spacing: 0.1em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 20px;
+    height: 30px;
+    box-sizing: border-box;
 }
-.page-link img {
-    vertical-align: middle;
+
+.page-item.active a {
+    color: #495C69;
+    border-bottom: 1px solid #495C69;
 }
