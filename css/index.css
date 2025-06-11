@@ -40,7 +40,8 @@ body {
     display: none;
 }
 
-.header-container {
+.header {
+    display: flex;
     padding: 30px;
     justify-content: flex-end;
 }
