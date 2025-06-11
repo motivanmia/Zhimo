@@ -3,20 +3,24 @@ body {
     background-repeat: no-repeat;
     background-position: left top;
 }
-.container {
+
+.form-area {
     margin-top: 200px;
     margin-bottom: 100px;
     text-align: center;
 }
+
 .form-area h4 {
     margin-bottom: 40px;
     color: #2b333e;
 }
+
 .register-login {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .toggle-button {
     display: flex;
     justify-content: space-around;
@@ -25,6 +29,7 @@ body {
     background-color: #e2e1e4;
     border-radius: 25px;
 }
+
 .toggle-button button {
     font-family: "Noto Serif TC";
     font-size: 1.125rem;
@@ -42,16 +47,19 @@ body {
     color: #2b333e;
     border-radius: 20px;
 }
+
 .toggle-button button.active {
     background-color: #fff;
     color: #2b333e;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .form-section {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
 .form-section input {
     font-family: "Noto Serif TC";
     font-size: 1rem;
@@ -65,9 +73,11 @@ body {
     font-size: 15px;
     background-color: transparent;
 }
+
 .form-section input:focus {
     outline: none;
 }
+
 .check-box {
     display: flex;
     align-items: center;
@@ -75,21 +85,25 @@ body {
     text-align: left;
     margin: 5px;
 }
+
 .check-box input[type="checkbox"] {
     flex-shrink: 0;
     width: 18px;
     height: 18px;
 }
+
 .check-box span {
     font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     color: #495c69;
 }
+
 .check-box a {
     color: #495c69;
     font-weight: 800;
 }
+
 .continue-btn {
     width: 100%;
     padding: 14px 145px;
@@ -103,17 +117,21 @@ body {
     border-radius: 6px;
     cursor: pointer;
 }
+
 .continue-btn:hover {
     background-color: #2b333e;
 }
+
 .continue-btn:active {
     color: #495c69;
     background-color: #ccccd6;
 }
+
 .password-input {
     position: relative;
     width: 100%;
 }
+
 .password-input .toggle-password {
     position: absolute;
     right: 10px;
@@ -121,6 +139,7 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
 }
+
 .forget-password {
     margin: 7px 0;
     text-align: left;
@@ -128,14 +147,17 @@ body {
     font-weight: 600;
     letter-spacing: 0.05em;
 }
+
 .forget-password a {
     color: #495c69;
     text-decoration: none;
     padding-left: 5px;
 }
+
 .social-login {
     margin: 25px 0;
 }
+
 .social-login p {
     font-size: 0.875rem;
     font-weight: 600;
@@ -143,7 +165,8 @@ body {
     color: #495C69;
     margin-bottom: 15px;
 }
-.social-btn button{
+
+.social-btn button {
     background: none;
     border: none;
     cursor: pointer;
@@ -152,16 +175,19 @@ body {
     height: 40px;
     padding: 0;
 }
+
 .social-btn img {
     width: 100%;
     height: 100%;
 }
+
 .social-btn {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
- /* 隱藏元素 */
+
+/* 隱藏元素 */
 .form-section.hidden {
     display: none;
 }
