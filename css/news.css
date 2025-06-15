@@ -4,6 +4,24 @@ body {
     background-position: center 200px;
 }
 
+.material {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/pattern/bg-img-30.png);
+    background-repeat: repeat;
+    background-size: auto;
+    z-index: 1;
+}
+
+.main-header,
+.news {
+    position: relative;
+    z-index: 3;
+}
+
 /* ategory-list */
 .category-list {
     display: flex;
@@ -50,8 +68,9 @@ body {
 }
 
 /* news */
-h2 {
+h3 {
     color: #2d2e36;
+    letter-spacing: 0.4em;
 }
 
 .news-area {
@@ -91,9 +110,9 @@ h2 {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: #495c69;
     height: 1px;
     width: 0;
+    background-color: #495c69;
     transition: 0.5s ease;
 }
 

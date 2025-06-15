@@ -62,10 +62,6 @@ body {
 /* header */
 .main-header {
     width: 100%;
-    background-color: #fff;
-    background-image: url(../img/pattern/bg-img-30.png);
-    background-size: auto;
-    background-repeat: repeat;
 }
 
 .header {
