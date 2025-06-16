@@ -17,18 +17,35 @@
 <body>
     <div class="material"></div>
     <!-- header -->
-    <header class="main-header">
-        <div class="header container">
+    <header class="main-header container">
+        <div class="header">
             <!-- logo -->
-            <a href="index.html" class="header-logo col-2">
+            <a href="index.html" class="header-logo">
                 <img src="./img/logo.svg" alt="LOGO">
             </a>
             <!-- menu -->
-            <nav class="main-nav">
-                <a href="about.html">關於我們</a>
-                <a href="news.html">最新消息</a>
-                <a href="allitems.html">商品總覽</a>
-                <a href="faq.html">常見問題</a>
+            <div class="nav-area">
+                <div class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li>
+                            <a href="productdetail.html" class="nav-item">商品總覽</a>
+                            <ul class="submenu">
+                                <li><a href="allitems.html">全部商品</a></li>
+                                <li><a href="allitems.html">新品上市</a></li>
+                                <li><a href="allitems.html">熱門商品</a></li>
+                                <li><a href="allitems.html">優惠專區</a></li>
+                                <li><a href="allitems.html">上衣</a></li>
+                                <li><a href="allitems.html">下裝</a></li>
+                                <li><a href="allitems.html">洋裝</a></li>
+                                <li><a href="allitems.html">外套</a></li>
+                                <li><a href="allitems.html">配飾</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="faq.html">常見問題</a></li>
+                    </ul>
+                </div>
                 <div class="header-icons">
                     <a href="#" class="icon-img">
                         <img src="./img/header/header-icon-search.svg" alt="搜尋">
@@ -40,13 +57,20 @@
                         <img src="./img/header/header-icon-cart.svg" alt="購物車">
                     </a>
                 </div>
-            </nav>
+                <div class="hb unclick">
+                    <span class="hb-line"></span>
+                    <span class="hb-text">
+                        <span class="open">MENU</span>
+                        <span class="close hide">CLOSE</span>
+                    </span>
+                </div>
+            </div>
         </div>
     </header>
     <!-- main-area -->
     <main>
         <section class="news">
-            <div class="container news-area">
+            <div class="news-area container">
                 <div class="news-title col-1">
                     <h3>最新消息</h3>
                 </div>
@@ -146,7 +170,7 @@
     <!-- footer -->
     <footer class="main-footer">
         <div class="footer-bg"></div>
-        <div class="footer-container">
+        <div class="footer-container container">
             <div class="footer-brand">
                 <a href="index.html" class="footer-logo">
                     <img src="./img/logo.svg" alt="LOGO">
@@ -164,7 +188,7 @@
                 </div>
             </div>
             <div class="footer-contact">
-                <h5>聯絡我們</h5>
+                <p class="contact-title">聯絡我們</p>
                 <p>Mail：Service@zhimo.com</p>
                 <p>Line：@zhimo</p>
                 <p>地址：桃園市中壢區復興路46號9樓</p>
@@ -184,6 +208,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script src="./javascript/common.js"></script>
 </body>
 
 </html>
