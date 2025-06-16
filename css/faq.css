@@ -15,7 +15,10 @@
     z-index: 3;
 }
 
+
 @media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}
 
 @media screen and (min-width: 1200px) {}
 
@@ -23,47 +26,68 @@
 
 /* faq */
 .large-title {
-    padding: 70px;
+    padding: 20px 0;
     text-align: center;
     color: #2d2e36;
 }
 
 .decoline {
-    margin: auto;
-    width: 100%;
+    margin: 0 10px;
     height: 35px;
     background-image: url(../img/decoline1200.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: auto 60%, cover;
+    overflow: hidden;
 }
+
 
 @media screen and (min-width: 1024px) {
     .large-title {
-        padding: 70px;
-        text-align: center;
-        color: #2d2e36;
+        padding: 70px 0;
+    }
+
+    .decoline {
+        margin: auto;
+        width: 100%;
+        background-size: auto, cover;
     }
 }
 
 /* main-area */
 .main-area {
-    margin: 70px 105px;
+    margin: 20px 10px;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 45px;
+}
+
+.faq-items {
+    margin-top: 20px;
+    color: #2b333e;
+    border-bottom: 1px solid #e2e1e4;
+    padding-bottom: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-area {
+        margin: 70px 105px;
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    .faq-items {
+        margin-top: 30px;
+        color: #2b333e;
+        border-bottom: 1px solid #e2e1e4;
+        padding-bottom: 10px;
+    }
 }
 
 .accordion-title {
     text-align: center;
     color: #2d2e36;
-}
-
-.faq-items {
-    margin-top: 30px;
-    color: #2b333e;
-    border-bottom: 1px solid #e2e1e4;
-    padding-bottom: 10px;
 }
 
 .faq-header {
@@ -73,7 +97,12 @@
     cursor: pointer;
 }
 
+.faq-header h5 {
+    flex-shrink: 1
+}
+
 .faq-icon {
+    flex-shrink: 0;
     width: 25px;
     height: 25px;
     background-color: #495c69;
