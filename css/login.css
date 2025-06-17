@@ -15,20 +15,30 @@
     z-index: 3;
 }
 
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
+
+
+/* login */
 main {
     background-image: url(../img/login/login-bg.svg);
     background-repeat: no-repeat;
-    background-position: 0% -15%;
+    background-position: 0% -5%;
+    background-size: auto 30%;
 }
 
 .form-area {
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin-top: 150px;
     text-align: center;
 }
 
 .form-area h4 {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
     color: #2b333e;
 }
 
@@ -41,25 +51,24 @@ main {
 .toggle-button {
     display: flex;
     justify-content: space-around;
-    width: 280px;
-    margin-bottom: 55px;
+    width: 195px;
+    margin-bottom: 35px;
     background-color: #e2e1e4;
     border-radius: 25px;
 }
 
 .toggle-button button {
     font-family: "Noto Serif TC";
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     font-weight: 600;
     line-height: calc(30/18);
     letter-spacing: 0.1em;
     flex: 1;
     margin: 5px 7px;
-    padding: 5px 25px;
+    padding: 1px;
     border: none;
     background: transparent;
     cursor: pointer;
-    font-size: 16px;
     font-weight: bold;
     color: #2b333e;
     border-radius: 20px;
@@ -79,38 +88,40 @@ main {
 
 .form-section input {
     font-family: "Noto Serif TC";
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     color: #495c69;
-    width: 426px;
+    width: 285px;
     padding: 5px;
     border: none;
-    border-bottom: 1px solid #495c69;
-    font-size: 15px;
+    border-bottom: 1px solid #ccccd6;
     background-color: transparent;
 }
 
 .form-section input:focus {
     outline: none;
+    border-bottom: 1px solid #495c69;
+    transform: matrix(0);
+    transition: 0.4s ease-in-out;
 }
 
 .check-box {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     text-align: left;
-    margin: 5px;
+    margin: 2.5px;
 }
 
 .check-box input[type="checkbox"] {
     flex-shrink: 0;
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
 }
 
 .check-box span {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     color: #495c69;
@@ -123,24 +134,26 @@ main {
 
 .continue-btn {
     width: 100%;
-    padding: 14px 145px;
+    padding: 14px 120px;
     background-color: #495C69;
     font-family: "Noto Serif TC";
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.1em;
-    color: #FFFEF9;
+    color: #eef7f2;
     border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
 .continue-btn:hover {
-    background-color: #2b333e;
+    background-color: #ccccd6;
+    color: #495c69;
+    font-weight: 700;
 }
 
 .continue-btn:active {
-    color: #495c69;
+    color: #eef7f2;
     background-color: #ccccd6;
 }
 
@@ -160,7 +173,7 @@ main {
 .forget-password {
     margin: 7px 0;
     text-align: left;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.05em;
 }
@@ -171,16 +184,12 @@ main {
     padding-left: 5px;
 }
 
-.social-login {
-    margin: 25px 0;
-}
-
 .social-login p {
     font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     color: #495C69;
-    margin-bottom: 15px;
+    margin: 20px 0;
 }
 
 .social-btn button {
@@ -204,7 +213,95 @@ main {
     gap: 20px;
 }
 
-/* 隱藏元素 */
+.toggle-password img.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        background-position: 0% -10%;
+        background-size: auto 40%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        background-position: 0% -5%;
+        background-size: auto 35%;
+    }
+
+    .form-area h4 {
+        margin-bottom: 40px;
+    }
+
+    .form-area {
+        margin-bottom: 100px;
+    }
+
+    .toggle-button {
+        width: 280px;
+        margin-bottom: 55px;
+    }
+
+    .toggle-button button {
+        font-size: 1rem;
+        margin: 5px 7px;
+        padding: 5px 20px;
+        font-weight: bold;
+        border-radius: 20px;
+    }
+
+    .form-section input {
+        font-size: 1rem;
+        width: 426px;
+        border-bottom: 1px solid #ccccd6;
+    }
+
+    .check-box {
+        gap: 8px;
+        margin: 2px;
+    }
+
+    .check-box input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .check-box span {
+        font-size: 0.875rem;
+    }
+
+    .continue-btn {
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 14px 145px;
+        cursor: pointer;
+    }
+
+    .social-login p {
+        font-size: 1rem;
+    }
+
+    .forget-password {
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main {
+        background-position: 0% -15%;
+        background-size: auto 50%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        background-position: 0% -15%;
+        background-size: auto;
+    }
+}
+
+/* 隱藏表單 */
 .form-section.hidden {
     display: none;
 }

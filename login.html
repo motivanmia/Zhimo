@@ -113,12 +113,13 @@
                         </div>
                     </div>
                 </form>
-                <form id="login-form" class="form-section active">
+                <form id="login-form" class="form-section">
                     <input type="email" placeholder="電子郵件">
                     <div class="password-input">
-                        <input type="password" placeholder="密碼">
-                        <span class="toggle-password" id="togglePassword">
-                            <img src="./img/login/login-close.svg" alt="eye">
+                        <input type="password" placeholder="密碼" class="psw">
+                        <span class="toggle-password" id="togglePassword" title="顯示密碼">
+                            <img src="./img/login/login-close.svg" alt="eye-close" class="eyeclose">
+                            <img src="./img/login/login-open.svg" alt="eye-open" class="eyeopen hidden">
                         </span>
                     </div>
                     <span class="forget-password">
@@ -181,6 +182,7 @@
 
     <script src="./vendors/jquery/jquery-3.7.1.min.js"></script>
     <script src="./javascript/common.js"></script>
+    <script src="./javascript/login.js"></script>
 </body>
 
 </html>
