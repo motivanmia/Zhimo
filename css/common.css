@@ -114,7 +114,7 @@ h5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .header-logo {
@@ -364,6 +364,11 @@ a.nav-logo img {
 }
 
 @media screen and (min-width: 1024px) {
+
+    .header {
+        padding: 20px;
+    }
+
     .hb {
         display: none;
     }
