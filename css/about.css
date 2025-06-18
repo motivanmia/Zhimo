@@ -11,6 +11,14 @@ body {
     z-index: 3;
 }
 
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
+
 /* about */
 .brand-relative {
     position: relative;

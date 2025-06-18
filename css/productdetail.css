@@ -306,11 +306,8 @@ td {
 
 th {
     background-color: #e2e1e4;
-    /* 表頭背景色 */
     font-weight: bold;
-    /* 字體加粗 */
     color: #334155;
-    /* 表頭文字顏色 */
 }
 
 .product-img {
@@ -425,7 +422,7 @@ th {
     font-size: 1.3rem;
     font-weight: 800;
     letter-spacing: 0.1em;
-    margin-top: var(--spacing-4, 24px);
+    margin-top: var(--spacing-3, 20px);
     margin-bottom: 1rem;
 }
 
