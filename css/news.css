@@ -200,3 +200,11 @@ h3 {
     color: #495C69;
     border-bottom: 1px solid #495C69;
 }
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}
