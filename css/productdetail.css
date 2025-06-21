@@ -18,7 +18,7 @@
 }
 
 .decoline {
-    margin: 30px 10px;
+    margin: 30px 0;
     height: 35px;
     background-image: url(../img/decoline1200.svg);
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@
 @media screen and (min-width: 1024px) {
     .breadcrumb {
         display: flex;
-        padding: var(--spacing-3, 20px) 0;
+        padding: var(--spacing-3, 20px);
     }
 
     .breadcrumb li:not(:first-child)::before {
@@ -70,87 +70,221 @@
 .product-content {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .product-gallery {
+    padding-inline: 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
 }
 
 .product-row {
-    width: 17%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    gap: 9px;
+    gap: 10px;
 }
 
 .small-img {
     width: 100%;
-    height: 140px;
+    height: auto;
     overflow: hidden;
     border-radius: 5px;
+    aspect-ratio: 4/5;
 }
 
 .small-img img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 1/1;
     object-fit: cover;
+    aspect-ratio: 4/5;
 }
 
 .product-big {
-    width: 74%;
-    height: 100%;
-    margin-right: 30px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    border-radius: 5px;
 }
 
 .product-big img {
     width: 100%;
     height: 100%;
-    aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 5px;
+    aspect-ratio: 4/5;
+}
+
+@media screen and (min-width: 768px) {
+    .product-gallery {
+        padding-inline: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .product-row {
+        width: 24%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+    }
+
+    .small-img {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 5px;
+        aspect-ratio: 4/5;
+    }
+
+    .small-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 4/5;
+    }
+
+    .product-big {
+        order: 2;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        aspect-ratio: 4/5;
+        border-radius: 5px;
+    }
+
+    .product-big img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 4/5;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 25px;
+        padding-inline: 30px;
+        padding-top: 20px;
+    }
+
+    .product-gallery {
+        width: 100%;
+        padding-inline: 0;
+    }
+
+    .product-row {
+        width: 25%;
+        height: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .product-content {
+        padding-inline: 60px;
+    }
+
+    .product-content {
+        gap: 40px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .product-content {
+        gap: 60px;
+    }
 }
 
 /* product-info */
 .product-info {
-    height: 300px;
-    padding-left: 25px;
-    padding-right: 0;
+    padding-inline: 30px;
+    margin: auto;
 }
 
 .info-content {
-    margin: 5px auto 25px auto;
+    padding: 0 10px 15px;
     border-bottom: 1px solid #2b333e;
-    padding-bottom: 34px;
 }
 
 .info-content h4 {
+    font-size: 1.25rem;
     color: #2d2e36;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .info-content p {
     color: #2B333E;
     text-align: justify;
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     font-weight: 600;
     line-height: calc(30/18);
     letter-spacing: 0.1em;
 }
 
 .price-info {
-    font-size: 1.5rem;
+    padding: 15px 10px 0;
+    font-size: 1.4rem;
     letter-spacing: 0.2em;
     font-weight: 700;
     color: #2b333e;
 }
 
+@media screen and (min-width: 768px) {
+    .info-content {
+        padding-inline: 20px;
+    }
+
+    .info-content h4 {
+        font-size: 1.3rem;
+    }
+
+    .info-content p {
+        font-size: 1.125rem;
+    }
+
+    .price-info {
+        padding-inline: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-info {
+        padding-inline: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .info-content {
+        padding-inline: 15px;
+        padding-bottom: 30px;
+    }
+
+    .info-content h4 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .price-info {
+        padding: 20px 15px 0;
+    }
+}
+
 /* selector */
 .specification {
-    margin: 24px 0;
+    margin: 20px 0;
+    padding-inline: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -171,7 +305,7 @@
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.1em;
-    margin-right: 25px;
+    margin-right: 15px;
 }
 
 .option input {
@@ -181,6 +315,7 @@
 .selector {
     display: flex;
     flex-direction: row;
+    gap: 15px;
 }
 
 .option span {
@@ -188,7 +323,6 @@
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.1em;
-    margin-right: 15px;
     display: block;
     width: 45px;
     height: 32px;
@@ -205,11 +339,41 @@
     font-weight: 700;
 }
 
+@media screen and (min-width: 768px) {
+    .specification {
+        padding-inline: 20px;
+    }
+
+    .type .title p {
+        margin-right: 20px;
+    }
+
+    .selector {
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .specification {
+        padding-inline: 10px;
+        margin: 30px 0;
+        gap: 25px;
+    }
+
+    .type .title p {
+        margin-right: 25px;
+    }
+
+    .selector {
+        gap: 25px;
+    }
+}
+
 /* quantity */
 .quantity {
     display: flex;
     justify-content: center;
-    margin: 20px 0 15px 0;
+    margin-bottom: 15px;
 }
 
 .quantity-input {
@@ -246,6 +410,7 @@
 }
 
 .button-cart {
+    margin: 0 10px;
     display: flex;
     justify-content: center;
 }
@@ -278,43 +443,58 @@
     background-color: #ccccd6;
 }
 
+@media screen and (min-width: 768px) {
+    .button-cart {
+        margin: 0 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .quantity {
+        margin-bottom: 25px;
+    }
+
+    .button-cart {
+        margin: 0 10px;
+    }
+}
+
 /* detail-area */
 .detail-list {
-    margin: auto;
+    margin: 0 auto;
+    padding-inline: 20px;
 }
 
 .product-text p {
     color: #2B333E;
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     line-height: calc(30/18);
     letter-spacing: 0.1em;
-    margin: auto;
-    margin-bottom: 40px;
-    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .size-table {
     color: #2B333E;
     text-align: center;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 600;
     line-height: calc(30/18);
     letter-spacing: 0.1em;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 table {
-    width: 90%;
-    margin: auto;
-    margin-top: 10px;
+    width: 100%;
+    margin: 5px auto;
 }
 
 th,
 td {
     border: 2px solid #2B333E;
-    padding: 12px 16px;
+    padding: 10px 16px;
     text-align: center;
 }
 
@@ -326,8 +506,8 @@ th {
 
 .product-img {
     width: 100%;
-    height: 1000px;
-    margin-bottom: 40px;
+    height: auto;
+    margin-bottom: 20px;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -335,6 +515,35 @@ th {
 .product-img img {
     width: 100%;
     height: 100%;
+    aspect-ratio: 4/5;
+}
+
+@media screen and (min-width: 768px) {
+    .product-text p {
+        font-size: 1.125rem;
+        margin: 0 20px 40px;
+    }
+
+    .size-table {
+        font-size: 1.125rem;
+        margin: 0 20px 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    table {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    th,
+    td {
+        padding: 12px 16px;
+    }
+
+    .product-img {
+        margin-bottom: 30px;
+    }
 }
 
 /* relevant-product */
@@ -521,11 +730,3 @@ th {
         font-size: 1.25rem;
     }
 }
-
-@media screen and (min-width: 768px) {}
-
-@media screen and (min-width: 1024px) {}
-
-@media screen and (min-width: 1200px) {}
-
-@media screen and (min-width: 1400px) {}
