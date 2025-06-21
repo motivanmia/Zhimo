@@ -294,10 +294,7 @@
 .type {
     display: flex;
     flex-direction: row;
-}
-
-.type .title {
-    align-content: center;
+    align-items: center;
 }
 
 .type .title p {
@@ -328,9 +325,10 @@
     height: 32px;
     border: 1.5px solid #CCCCD6;
     border-radius: 5px;
-    text-align: center;
-    align-content: center;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .option input:checked+span {
