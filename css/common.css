@@ -101,13 +101,13 @@ h5 {
     height: 100%;
     background-image: url(../img/pattern/bg-img-30.png);
     background-repeat: repeat;
-    /* background-size: auto; */
     z-index: 1;
 }
 
 /* header */
 .main-header {
     z-index: 5;
+    transition: background-color 0.4s ease-out, box-shadow 0.4s ease-out, transform 0.4s ease-out;
 }
 
 .header {
@@ -115,6 +115,8 @@ h5 {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .header-logo {
@@ -257,7 +259,7 @@ h5 {
 div.nav-head {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 5px 0;
 }
 
 a.nav-logo {
@@ -364,7 +366,6 @@ a.nav-logo img {
 }
 
 @media screen and (min-width: 1024px) {
-
     .header {
         padding: 20px;
     }
@@ -655,4 +656,62 @@ input[type=number]::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+/* header固定 */
+.main-header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    background-color: #fff;
+    background-image: url(../img/pattern/bg-img-30.png);
+    background-repeat: repeat;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease-out, box-shadow 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.main-header.sticky .header {
+    margin: 0 auto;
+    padding: 5px 20px;
+}
+
+.main-header.sticky+main {
+    margin-top: 70px;
+}
+
+@media screen and (min-width: 768px) {
+    .main-header.sticky .header {
+        max-width: 720px;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .main-header.sticky .header {
+        max-width: 960px;
+        padding: 15px 20px;
+    }
+
+    .main-header.sticky+main {
+        margin-top: 90px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-header.sticky .header {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 15px 20px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .main-header.sticky .header {
+        max-width: 1200px;
+    }
 }

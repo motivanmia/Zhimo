@@ -34,6 +34,10 @@ body {
     opacity: 0;
 }
 
+.main-header.sticky .header>.header-logo {
+    opacity: 1;
+}
+
 /* banner */
 .home-banner {
     position: relative;
@@ -89,6 +93,16 @@ body {
     align-items: flex-start;
     color: #2d2e36;
     box-sizing: border-box;
+    overflow: hidden;
+}
+
+.char {
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
+}
+
+.banner-content .char {
+    opacity: 0.1;
 }
 
 .banner-title {

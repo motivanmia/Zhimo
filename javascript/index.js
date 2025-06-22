@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
+    let textEl = document.querySelectorAll('.banner-content h1, .banner-content p');
+
+    let delay = 10;
+
+    textEl.forEach(element => {
+        let textContent = element.textContent;
+        element.innerHTML = '';
+
+        for (let i = 0; i < textContent.length; i++) {
+            let charSpan = document.createElement('span'); // 創建一個新的<span>元素
+            charSpan.classList.add('char');
+            charSpan.textContent = textContent[i];
+            element.appendChild(charSpan); // 將<span>添加到當前元素中
+
+            // 使用setTimeout為每個字元設置動畫延遲
+            setTimeout(() => {
+                charSpan.style.opacity = '1';
+            }, delay);
+            delay += 100; // 每次遞增延遲時間，控制動畫速度。這個值越小，動畫越快。
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     const hoverItem = document.getElementById('hover-item');
     const originalLine = document.getElementById('original-line');
     const extensionParts = document.querySelectorAll('.extension-part');
@@ -95,49 +119,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 監聽螢幕尺寸變化，當符合 media query 條件時重新設定效果
     mediaQuery.addListener(toggleHoverEffects);
-
-
-
-
-    // // 初始化每個延伸部分的線條：設定 stroke-dasharray 和 stroke-dashoffset 使其隱藏
-    // extensionParts.forEach(part => {
-    //     const partLength = part.getTotalLength();
-    //     part.style.strokeDasharray = partLength;
-    //     part.style.strokeDashoffset = partLength; // 初始完全隱藏
-    //     part.style.opacity = '0'; // 確保初始不可見
-    // });
-
-    // // 監聽 hoverItem 的 mouseenter 事件 (鼠標進入時)
-    // hoverItem.addEventListener('mouseenter', () => {
-    //     // 清除任何尚未執行的離開動畫計時器
-    //     leaveTimeouts.forEach(clearTimeout);
-    //     leaveTimeouts = [];
-
-    //     // 依序動畫每個延伸部分
-    //     extensionParts.forEach((part, index) => {
-    //         const timeoutId = setTimeout(() => {
-    //             part.style.strokeDashoffset = '0'; // 從頭開始繪製
-    //             part.style.opacity = '1';         // 顯示
-    //         }, index * delayTime); // 根據索引增加延遲
-    //         enterTimeouts.push(timeoutId); // 儲存計時器 ID
-    //     });
-    // });
-
-    // // 監聽 hoverItem 的 mouseleave 事件 (鼠標離開時)
-    // hoverItem.addEventListener('mouseleave', () => {
-    //     // 清除任何尚未執行的進入動畫計時器
-    //     enterTimeouts.forEach(clearTimeout);
-    //     enterTimeouts = [];
-
-    //     // 依序逆向動畫每個延伸部分，使其依序縮回
-    //     // 將 NodeList 轉換為陣列，然後反轉，以便從最後一個部分開始隱藏
-    //     Array.from(extensionParts).reverse().forEach((part, index) => {
-    //         const partLength = part.getTotalLength(); // 重新獲取長度以防萬一
-    //         const timeoutId = setTimeout(() => {
-    //             part.style.strokeDashoffset = partLength; // 縮回
-    //             part.style.opacity = '0';                 // 隱藏
-    //         }, index * delayTime); // 延遲基於逆向索引
-    //         leaveTimeouts.push(timeoutId); // 儲存計時器 ID
-    //     });
-    // });
 });
