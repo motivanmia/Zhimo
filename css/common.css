@@ -500,6 +500,10 @@ a.nav-logo img {
     letter-spacing: 0.1em;
 }
 
+.footer-contact p a {
+    text-decoration: none;
+}
+
 .footer-contact .contact-title {
     font-weight: 700;
 }
