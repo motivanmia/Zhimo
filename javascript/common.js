@@ -78,3 +78,13 @@ function quantityControl(block) {
     input.addEventListener('change', updateDispatch);
     updateDispatch();
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    let quantityInput = document.querySelectorAll('.quantity-input');
+
+    quantityInput.forEach(function (block) {
+        if (!block.closest('.cartitem')) {
+            quantityControl(block);
+        }
+    });
+});
