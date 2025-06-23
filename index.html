@@ -15,6 +15,118 @@
 </head>
 
 <body>
+    <!-- lightbox -->
+    <div class="item-lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="close-btn"></span>
+            <div class="lightbox-pic">
+                <div class="box-pic-big">
+                    <img id="large-pic" src="./img/product/product-gray-pants-detail.jpg" alt="bigpic">
+                </div>
+                <div class="box-pic-row">
+                    <div class="small-img">
+                        <img class="small-pic" src="./img/product/product-gray-pants-detail.jpg" alt="gray">
+                    </div>
+                    <div class="small-img">
+                        <img class="small-pic" src="./img/product/product-pants-s-2.jpg" alt="white">
+                    </div>
+                    <div class="small-img">
+                        <img class="small-pic" src="./img/product/product-pants-s-3.jpg" alt="black">
+                    </div>
+                    <div class="small-img">
+                        <img class="small-pic" src="./img/product/product-pants-s-4.jpg" alt="waist">
+                    </div>
+                </div>
+            </div>
+            <div class="lightbox-info">
+                <div class="box-info-content">
+                    <h4>竹風。清影－高腰壓褶褲</h4>
+                    <p>
+                        以簡約的線條展現寫意風骨，腰間束帶輕繫，似竹般柔韌。
+                        <br>
+                        垂墜的版型，行走間搖曳生姿，展現灑脫氣韻
+                        <br>
+                        搭配素雅上衣，便是一身清逸出塵的裝扮，舉手投足之間，盡是雅致風華。
+                    </p>
+                </div>
+                <div class="box-price-info">
+                    <p>
+                        NT$
+                        <span>1,080</span>
+                    </p>
+                </div>
+                <div class="box-specification">
+                    <div class="box-type">
+                        <div class="title">
+                            <p>顏色</p>
+                        </div>
+                        <ul class="box-selector">
+                            <li class="box-option">
+                                <label for="灰">
+                                    <input type="radio" name="color-label" id="灰">
+                                    <span>灰</span>
+                                </label>
+                            </li>
+                            <li class="box-option">
+                                <label for="黑">
+                                    <input type="radio" name="color-label" id="黑">
+                                    <span>黑</span>
+                                </label>
+                            </li>
+                            <li class="box-option">
+                                <label for="米">
+                                    <input type="radio" name="color-label" id="米">
+                                    <span>米</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box-type">
+                        <div class="title">
+                            <p>尺寸</p>
+                        </div>
+                        <ul class="box-selector">
+                            <li class="box-option">
+                                <label for="S">
+                                    <input type="radio" name="size-label" id="S">
+                                    <span>S</span>
+                                </label>
+                            </li>
+                            <li class="box-option">
+                                <label for="M">
+                                    <input type="radio" name="size-label" id="M">
+                                    <span>M</span>
+                                </label>
+                            </li>
+                            <li class="box-option">
+                                <label for="L">
+                                    <input type="radio" name="size-label" id="L">
+                                    <span>L</span>
+                                </label>
+                            </li>
+                            <li class="box-option">
+                                <label for="XL">
+                                    <input type="radio" name="size-label" id="XL">
+                                    <span>XL</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="quantity">
+                    <div class="quantity-input">
+                        <input type="button" value="－" class="btn-icon minus">
+                        <input type="number" value="1" min="1" max="10" class="qty-input" />
+                        <input type="button" value="＋" class="btn-icon plus">
+                    </div>
+                </div>
+                <div class="box-button-cart">
+                    <button class="box-btn-cart">加入購物車</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- background -->
     <div class="material"></div>
     <!-- header -->
     <header class="main-header container">
@@ -87,19 +199,19 @@
     <main>
         <section class="home-banner">
             <!-- logo -->
-            <a href="index.html" class="home-logo">
+            <a href="index.html" class="home-logo aos">
                 <img src="./img/index/index-logo.svg" alt="LOGO">
             </a>
             <div class="banner-area">
-                <div class="banner-img">
+                <div class="banner-img aos">
                     <img src="./img/index/banner-3.webp" alt="banner">
                 </div>
-                <div class="banner-content">
+                <div class="banner-content aos">
                     <div class="banner-title">
                         <h1 class="line-1">為你的日常</h1>
                         <h1 class="line-2">添一抹東方寫意</h1>
                     </div>
-                    <div class="banner-text">
+                    <div class="banner-text aos">
                         <p>如一方素淨的宣紙</p>
                         <p>以東方文化的筆墨</p>
                         <p>織就獨有的風格印記</p>
@@ -108,18 +220,18 @@
             </div>
         </section>
         <section class="about-brand">
-            <div class="index-title">
+            <div class="index-title aos">
                 <img src="./img/index/title-line-left.svg" alt="decoline" class="img-left">
                 <h2 class="h2-title">關於織墨</h2>
                 <img src="./img/index/title-line-right.svg" alt="decoline" class="img-right">
             </div>
             <div class="about-area">
-                <div class="about-bg">
+                <div class="about-bg aos">
                     <img src="./img/index/about.png" alt="aboutimg">
                 </div>
                 <div class="about-content">
                     <a href="about.html">
-                        <div class="about-text">
+                        <div class="about-text aos">
                             <p>織墨，以東方文化為底蘊，在現代服飾上暈染獨特的東方氣息。</p>
                             <p>我們從傳統文化中汲取靈感，將寫意線條、內斂紋樣，融入舒適的當代剪裁，為穿搭注入清新東方韻味，於日常之中展現不凡。</p>
                         </div>
@@ -129,10 +241,10 @@
         </section>
         <section class="about-news">
             <div class="container news-area">
-                <div class="news-title col-12 col-md-1">
+                <div class="news-title col-12 col-md-1 aos">
                     <h2>最新消息</h2>
                 </div>
-                <ol class="news-list col-12 col-md-7">
+                <ol class="news-list col-12 col-md-7  aos">
                     <li class="news-list-item">
                         <a href="news.html">
                             <div class="news-time">
@@ -208,19 +320,19 @@
             </div>
         </section>
         <section class="container new-items">
-            <div class="index-title">
+            <div class="index-title  aos">
                 <img src="./img/index/title-line-left.svg" alt="decoline" class="img-left">
                 <h2 class="h2-title">新款上市</h2>
                 <img src="./img/index/title-line-right.svg" alt="decoline" class="img-right">
             </div>
-            <div class="items-list row row-cols-2 row-cols-md-4">
+            <div class="items-list row row-cols-2 row-cols-md-4 aos">
                 <div class="col">
                     <div class="item-card">
                         <a href="productdetail.html">
                             <div class="item-img">
                                 <img src="./img/product/product-gray-pants.jpg" alt="gray-pants" class="graypants">
                                 <div class="item-hover">
-                                    <button class="cart-button">加入購物車</button>
+                                    <button class="cart-button add-cart">加入購物車</button>
                                 </div>
                             </div>
                             <div class="item-name">
@@ -242,7 +354,7 @@
                             <div class="item-img">
                                 <img src="./img/product/product-mono-dress.webp" alt="mono-dress" class="monodress">
                                 <div class="item-hover">
-                                    <button class="cart-button">加入購物車</button>
+                                    <button class="cart-button add-cart">加入購物車</button>
                                 </div>
                             </div>
                             <div class="item-name">
@@ -265,7 +377,7 @@
                                 <img src="./img/product/product-bamboo-shirt.jpg" alt="bamboo-shirt"
                                     class="bambooshirt">
                                 <div class="item-hover">
-                                    <button class="cart-button">加入購物車</button>
+                                    <button class="cart-button add-cart">加入購物車</button>
                                 </div>
                             </div>
                             <div class="item-name">
@@ -287,7 +399,7 @@
                             <div class="item-img">
                                 <img src="./img/product/product-gray-skirt.jpg" alt="gray-skirt" class="grayskirt">
                                 <div class="item-hover">
-                                    <button class="cart-button">加入購物車</button>
+                                    <button class="cart-button add-cart">加入購物車</button>
                                 </div>
                             </div>
                             <div class="item-name">
@@ -306,19 +418,19 @@
             </div>
         </section>
         <section class="container best-items">
-            <div class="index-title">
+            <div class="index-title aos">
                 <img src="./img/index/title-line-left.svg" alt="decoline" class="img-left">
                 <h2 class="h2-title">熱門商品</h2>
                 <img src="./img/index/title-line-right.svg" alt="decoline" class="img-right">
             </div>
-            <div class="items-list row row-cols-2 row-cols-md-4">
+            <div class="items-list row row-cols-2 row-cols-md-4  aos">
                 <div class="col">
                     <div class="item-card">
                         <a href="productdetail.html">
                             <div class="item-img">
                                 <img src="./img/product/product-red-coat.jpg" alt="red-coat" class="redcoat">
                                 <div class="item-hover">
-                                    <button class="cart-button">加入購物車</button>
+                                    <button class="cart-button add-cart">加入購物車</button>
                                 </div>
                             </div>
                             <div class="item-name">
@@ -340,7 +452,7 @@
                             <div class="item-img">
                                 <img src="./img/product/product-dia-vest.jpg" alt="dia-vest" class="diavest">
                                 <div class="item-hover">
-                                    <button class="cart-button">加入購物車</button>
+                                    <button class="cart-button add-cart">加入購物車</button>
                                 </div>
                             </div>
                             <div class="item-name">
@@ -363,7 +475,7 @@
                                 <img src="./img/product/product-suspender-skirt.jpg" alt="black-skirt"
                                     class="blackskirt">
                                 <div class="item-hover">
-                                    <button class="cart-button">加入購物車</button>
+                                    <button class="cart-button add-cart">加入購物車</button>
                                 </div>
                             </div>
                             <div class="item-name">
@@ -385,7 +497,7 @@
                             <div class="item-img">
                                 <img src="./img/product/product-aoi-coat.jpg" alt="aoi-coat" class="aoicoat">
                                 <div class="item-hover">
-                                    <button class="cart-button">加入購物車</button>
+                                    <button class="cart-button add-cart">加入購物車</button>
                                 </div>
                             </div>
                             <div class="item-name">

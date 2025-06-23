@@ -96,15 +96,6 @@ body {
     overflow: hidden;
 }
 
-.char {
-    opacity: 0;
-    transition: opacity 0.7s ease-out;
-}
-
-.banner-content .char {
-    opacity: 0.1;
-}
-
 .banner-title {
     writing-mode: vertical-lr;
 }

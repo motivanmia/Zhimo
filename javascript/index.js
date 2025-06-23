@@ -1,3 +1,4 @@
+//標題文字漸變
 document.addEventListener('DOMContentLoaded', () => {
     let textEl = document.querySelectorAll('.banner-content h1, .banner-content p');
 
@@ -22,6 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+//hover線條
 document.addEventListener('DOMContentLoaded', () => {
     const hoverItem = document.getElementById('hover-item');
     const originalLine = document.getElementById('original-line');

@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// nav
+// 手機板 nav
 $("div.hb").on("click", function () {
     let unclick = $("div.hb").hasClass("unclick");
     if (unclick = "ture") {
@@ -25,7 +25,7 @@ $("div.hb").on("click", function () {
     }
 });
 
-//submenu
+//手機板 submenu
 $("a.nav-item").on("click", function (e) {
     if ($(window).width() <= 1024) {
         e.preventDefault();
@@ -85,6 +85,71 @@ document.addEventListener('DOMContentLoaded', function () {
     quantityInput.forEach(function (block) {
         if (!block.closest('.cartitem')) {
             quantityControl(block);
+        }
+    });
+});
+
+//淡入淡出
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.bottom < 20 || rect.top > window.innerHeight;
+}
+
+function addClassToVisibleElements() {
+    var aosElements = document.querySelectorAll(".aos");
+    aosElements.forEach(function (aosElement) {
+        if (!isElementInViewport(aosElement)) aosElement.classList.add("ed");
+        else aosElement.classList.remove("ed");
+    });
+}
+
+document.addEventListener("scroll", addClassToVisibleElements);
+addClassToVisibleElements();
+
+// 商品點小圖換大圖
+function showLarge(e) {
+    let smalls = e.target;
+    if (smalls.tagName === "IMG") {
+        document.getElementById("large-pic").src = smalls.src;
+    }
+}
+
+function init() {
+    let smallPic = document.querySelectorAll(".small-pic");
+    smallPic.forEach(function (img) {
+        img.onclick = showLarge;
+    });
+}
+
+window.addEventListener("load", init);
+
+//購物車按鈕跳燈箱
+document.addEventListener('DOMContentLoaded', function () {
+    let addcartBtn = document.querySelectorAll('.cart-button');
+    let lightbox = document.getElementById('lightbox');
+    let closeBtn = lightbox.querySelector('.close-btn');
+
+    function openbox() {
+        lightbox.classList.add('show');
+    };
+
+    function closebox() {
+        lightbox.classList.remove('show');
+    };
+
+    addcartBtn.forEach(function (button) {
+        button.addEventListener('click', function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            openbox();
+        })
+    });
+
+    closeBtn.addEventListener('click', closebox);
+
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) {
+            closebox();
         }
     });
 });
