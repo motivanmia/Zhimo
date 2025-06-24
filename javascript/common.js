@@ -106,22 +106,23 @@ function addClassToVisibleElements() {
 document.addEventListener("scroll", addClassToVisibleElements);
 addClassToVisibleElements();
 
-// 商品點小圖換大圖
-function showLarge(e) {
-    let smalls = e.target;
-    if (smalls.tagName === "IMG") {
-        document.getElementById("large-pic").src = smalls.src;
-    }
-}
+// 商品點小圖換大圖(資訊頁面)
+const mainProductGallery = document.querySelector('.product-gallery')
 
-function init() {
-    let smallPic = document.querySelectorAll(".small-pic");
-    smallPic.forEach(function (img) {
-        img.onclick = showLarge;
-    });
+if (mainProductGallery) {
+    mainProductGallery.addEventListener('click', function (e) {
+        let smalls = e.target;
+        if (smalls.tagName === "IMG" && smalls.classList.contains("small-pic")) {
+            let productGallery = smalls.closest('.product-gallery');
+            if (productGallery) {
+                let largePic = productGallery.querySelector('#large-pic');
+                if (largePic) {
+                    largePic.src = smalls.src;
+                }
+            }
+        }
+    })
 }
-
-window.addEventListener("load", init);
 
 //購物車按鈕跳燈箱
 document.addEventListener('DOMContentLoaded', function () {
@@ -153,3 +154,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// 商品點小圖換大圖(燈箱)
+const boxProductGallery = document.querySelector('.lightbox-pic')
+
+if (boxProductGallery) {
+    boxProductGallery.addEventListener('click', function (e) {
+        let smalls = e.target;
+        if (smalls.tagName === "IMG" && smalls.classList.contains("small-pic")) {
+            let productGallery = smalls.closest('.lightbox-pic');
+            if (productGallery) {
+                let largePic = productGallery.querySelector('#large-pic');
+                if (largePic) {
+                    largePic.src = smalls.src;
+                }
+            }
+        }
+    })
+}
