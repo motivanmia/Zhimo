@@ -296,6 +296,7 @@ a.nav-logo img {
     height: 1px;
     width: 100%;
     top: 10px;
+    right: 0;
     background-color: #2d2e36;
     display: block;
     position: absolute;
